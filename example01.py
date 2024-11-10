@@ -12,7 +12,7 @@ class Model(nn.Module):
         self.output = nn.Linear(10, 1)  # output layer
         
     def forward(self, x):
-        x = torch.sin(self.hidden(x))  # apply the sine activation function
+        x = torch.tanh(self.hidden(x))  # apply the sine activation function
         x = self.output(x)
         return x
 
